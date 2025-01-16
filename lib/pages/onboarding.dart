@@ -11,9 +11,9 @@ class _OnboardingState extends State<Onboarding> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffecefe8),
+      backgroundColor: Color.fromARGB(255, 234, 235, 231),
       body: Container(child: Column(children: [
-
+Image.asset("images/bg.png")
       ],),),
     );
   }
