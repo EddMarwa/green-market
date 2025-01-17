@@ -1,24 +1,31 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:projects/pages/onboarding.dart';
+//import 'package:flutter_stripe/flutter_stripe.dart';
+//import 'package:shoppingapp/pages/bottomnav.dart';
+//import 'package:shoppingapp/services/constant.dart';
 
-void main() {
+void main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+ // Stripe.publishableKey=publishablekey;
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  
+
   // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
+  @override 
+  Widget build(BuildContext context) {642314
+  
     return MaterialApp(
       title: 'Flutter Demo',
-       debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
-        //
+        // Trial app
         // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
+        // the application has a blue toolbar. Then, without quitting the app,
         // try changing the seedColor in the colorScheme below to Colors.green
         // and then invoke "hot reload" (save your changes or press the "hot
         // reload" button in a Flutter-supported IDE, or press "r" if you used
@@ -33,7 +40,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Onboarding(),
+     // home:BottomNav()
     );
   }
 }
